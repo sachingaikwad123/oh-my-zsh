@@ -2,7 +2,7 @@
 #          FILE:  vi-mode.plugin.zsh
 #   DESCRIPTION:  oh-my-zsh plugin file.
 #        AUTHOR:  Sorin Ionescu (sorin.ionescu@gmail.com)
-#       VERSION:  1.0.2
+#       VERSION:  1.0.3
 # ------------------------------------------------------------------------------
 
 
@@ -55,8 +55,15 @@ bindkey -M vicmd v edit-command-line # ESC-v to edit in an external editor.
 bindkey ' ' magic-space 
 bindkey -M vicmd "gg" beginning-of-history
 bindkey -M vicmd "G" end-of-history
-bindkey -M vicmd "k" history-search-backward
-bindkey -M vicmd "j" history-search-forward
+
+# ZSH builtin history search.
+# bindkey -M vicmd "k" history-search-backward
+# bindkey -M vicmd "j" history-search-forward
+
+# The zsh-history-substring-search plugin must be installed.
+bindkey -M vicmd "k" zsh-history-substring-search-backward
+bindkey -M vicmd "j" zsh-history-substring-search-forward
+
 bindkey -M vicmd "?" history-incremental-search-backward
 bindkey -M vicmd "/" history-incremental-search-forward
 
