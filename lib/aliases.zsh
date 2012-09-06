@@ -55,7 +55,6 @@ alias f='fg'
 alias gr='grep -r'
 alias afind='ack -il'
 alias type='type -a'
-# alias ssh='ssh -X'
 alias print-path='echo -e ${PATH//:/\\n}'
 alias t="t --task-dir ~/.tasks --list todo.txt --delete-if-empty"
 
@@ -114,3 +113,5 @@ alias S="screen $screenrc -U -S"
 alias tmux="tmux $tmuxconf"
 alias tls="tmux list-sessions"
 
+alias cfind="find -follow -iname '*.c' -o -iname '*.cc' -o -iname '*.cpp' -o -iname '*.h'"
+alias ccfind="find -follow -iname '*.cc' -o -iname '*.cpp'"
