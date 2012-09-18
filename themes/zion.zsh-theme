@@ -66,7 +66,7 @@ PROMPT='$user_$host_$path_ $GIT_PROMPT_INFO$jobs_# '
 
 #local date_format_='%D{%a %b %d}, %*'
 #local date_="${_Cdate_}[$date_format_]$R"
-local return_code_="%(?..$_Creturn_code_%? ↵ )$R"
+local return_code_="%(?..$_Creturn_code_%?  )$R"
 
 #RPROMPT='$return_code_$date_'
 RPROMPT='$return_code_'
