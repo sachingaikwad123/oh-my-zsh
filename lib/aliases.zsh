@@ -110,7 +110,8 @@ alias sl="screen $screenrc -list"
 alias sr="screen $screenrc -a -A -U -D -R"
 alias S="screen $screenrc -U -S"
 
-alias tmux="tmux $tmuxconf"
+# let tmux detect all 256 colors
+alias tmux="tmux -2"
 alias tls="tmux list-sessions"
 
 alias cfind="find -follow -iname '*.c' -o -iname '*.cc' -o -iname '*.cpp' -o -iname '*.h'"
