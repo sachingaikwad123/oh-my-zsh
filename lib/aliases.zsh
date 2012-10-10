@@ -57,6 +57,7 @@ alias afind='ack -il'
 alias type='type -a'
 alias print-path='echo -e ${PATH//:/\\n}'
 alias t="t --task-dir ~/.tasks --list todo.txt --delete-if-empty"
+alias less="less -R"
 
 alias z='vim -o ~/.zshenv ~/.oh-my-zsh/lib/aliases.zsh ~/.zshrc'
 alias zs='source ~/.zshrc'
