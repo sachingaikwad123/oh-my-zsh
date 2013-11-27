@@ -83,7 +83,7 @@ function sshdel()
 
 function pmake()
 {
-    PRETTY=1 make $@
+    PRETTY=1 nice -n 20 ionice -c 3 make $@
 }
 
 function duf()
