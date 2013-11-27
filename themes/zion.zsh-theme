@@ -62,7 +62,7 @@ local host_="$_Chost_%m$R"
 local path_="$_Cpath_%~$R"
 local jobs_="%(1j.$_Cjobs_%j$R.)"
 
-PROMPT='$user_$host_$path_ $GIT_PROMPT_INFO$jobs_# '
+PROMPT='$user_@$host_$path_ $GIT_PROMPT_INFO$jobs_# '
 
 #local date_format_='%D{%a %b %d}, %*'
 #local date_="${_Cdate_}[$date_format_]$R"
