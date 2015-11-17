@@ -19,7 +19,7 @@ for color in {000..255}; do
 done
 
 
-ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Arma virumque cano Troiae qui primus ab oris}
+ZSH_SPECTRUM_TEXT=${ZSH_SPECTRUM_TEXT:-Test}
 
 # Show all 256 colors with color number
 function spectrum_ls() {

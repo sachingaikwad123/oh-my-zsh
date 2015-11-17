@@ -32,7 +32,7 @@ if [[ "$DISABLE_COLOR" != "true" ]]; then
 
     # PROMPT colors:
     local _Cuser_="%{$fg_bold[cyan]%}"
-    local _Chost_="%{$fg_bold[blue]%}"
+    local _Chost_="%{$FG[200]%}"
     local _Cpath_="%{$fg_bold[white]%}"
     local _Cjobs_="%{$fg[blue]%}"
 
