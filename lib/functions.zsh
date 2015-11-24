@@ -94,3 +94,35 @@ then echo -e "${size}${unit}\t${fname}"; break; fi; \
 size=$((size/1024)); done; done
 
 }
+
+# Print git config user.name and user.email
+function gcu()
+{
+    echo "Name : `git config user.name`"
+    echo "Email: `git config user.email`"
+}
+
+# Change gitconfig from "personal" or "work"
+# gitconfig file names should be this format: gitconfig_<theme>
+# Example: For "personal": gitconfig_personal should be present in homedir
+# Current supported themes:
+# 	- personal
+# 	- work
+function chgit()
+{
+    GITCONFIG_FILE="$HOME/.gitconfig"
+    TO_THEME=$1
+    TO_GITCONFIG_FILE="$HOME/gitconfig_${TO_THEME}"
+    if [ ! -f "${TO_GITCONFIG_FILE}" ]; then
+	echo "ERROR: ${TO_THEME} is not valid. ${TO_GITCONFIG_FILE} file does not exist."
+	return
+    fi
+    echo "Switching gitconfig to '${TO_THEME}'"
+    rm -rf ${GITCONFIG_FILE}
+    ln -s "${TO_GITCONFIG_FILE}" "${GITCONFIG_FILE}"
+    if [[ $? -ne 0 ]]; then
+	echo "ERROR: Failed to create ${GITCONFIG_FILE} file."
+	return
+    fi
+    gcu
+}
