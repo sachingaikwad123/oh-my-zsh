@@ -12,3 +12,6 @@ export SVN_EDITOR=$HOME/bin/svn-editor
 stty start ^_
 stty stop ^_
 
+# Include /opt/local/bin for Mac OSX ports in PATH
+export PATH=$PATH:/opt/local/bin
+
