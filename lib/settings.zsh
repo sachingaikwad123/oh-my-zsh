@@ -15,3 +15,7 @@ stty stop ^_
 # Include /opt/local/bin for Mac OSX ports in PATH
 export PATH=$PATH:/opt/local/bin
 
+# For Ubuntu JAVA
+# JAVA_HOME
+export JAVA_HOME=/usr/lib/jvm/java-8-oracle
+
